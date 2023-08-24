@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Sat Aug 19 11:22:55 2023
+# Process ID: 27616
+# Log file: C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/vivado.log
+# Journal file: C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\alan7\Documents\procesadores\monocycle\monocycle_rtl\monocycle_rtl.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_2
+launch_xsim -simset sim_1 -mode behavioral
+synth_design -rtl -name rtl_3
+synth_design -rtl -name rtl_3
+launch_xsim -simset sim_1 -mode behavioral
+launch_xsim -simset sim_1 -mode behavioral
+synth_design -rtl -name rtl_4
+launch_xsim -simset sim_1 -mode behavioral
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav2.wcfg}
+restart
+run 10 us
+launch_xsim -simset sim_1 -mode behavioral
+add_wave {{/monocycle_rtl_tb/prueba/fetch1/pc}} 
+add_wave {{/monocycle_rtl_tb/prueba/fetch1/data}} 
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav3.wcfg}
+restart
+run 10 us
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav3.wcfg}
+launch_xsim -simset sim_1 -mode behavioral
+synth_design -rtl -name rtl_5
+launch_xsim -simset sim_1 -mode behavioral
+close_sim

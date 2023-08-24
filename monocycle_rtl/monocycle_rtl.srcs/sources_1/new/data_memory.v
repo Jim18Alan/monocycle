@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 08.08.2023 10:22:03
+// Create Date: 09.08.2023 23:21:15
 // Design Name: 
-// Module Name: fetch_instruction_memory
+// Module Name: data_memory
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,17 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fetch_instruction_memory(
+module data_memory(
     input wire clk_i,
+    input wire mem_write,
     input wire [31:0] addr,
-    output reg [31:0] data
+    input wire [31:0] write_data,
+    output reg [31:0] read_data
     );
     
-    reg [31:0] ROM [31:0]; 
+    reg [100:0] ROM [31:0]; 
     
     always @(posedge clk_i)
-        data <= ROM[addr];
-    //assign ROM_data = ROM[ROM_addr]; 
-    
-    initial $readmemb ("C:/Users/alan7/Documents/procesadores/monocycle/kernels/test_slt.txt", ROM, 0, 31); 
+        read_data <= ROM[addr];
+        
+    always @(*)
+        ROM[addr] = write_data;
+
+
 endmodule

@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="13" />
    <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/clk_i" type="logic">
       <obj_property name="ElementShortName">clk_i</obj_property>
       <obj_property name="ObjectShortName">clk_i</obj_property>
@@ -194,22 +194,6 @@
          <obj_property name="ElementShortName">data_o[31:0]</obj_property>
          <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/alu1/alu_read_data_1" type="array">
-      <obj_property name="ElementShortName">alu_read_data_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_read_data_1[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/alu1/alu_read_data_2" type="array">
-      <obj_property name="ElementShortName">alu_read_data_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_read_data_2[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/alu1/alu_control" type="array">
-      <obj_property name="ElementShortName">alu_control[3:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_control[3:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/alu1/alu_result" type="array">
-      <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/alu1/is_neg1" type="logic">
       <obj_property name="ElementShortName">is_neg1</obj_property>

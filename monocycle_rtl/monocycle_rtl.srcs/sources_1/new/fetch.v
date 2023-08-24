@@ -23,8 +23,9 @@
 module fetch(
   input wire clk_i,    // reloj
   input wire rst_i,  // reinicio
-  output reg [31:0] pc  // Contador  16 bits
+  output [31:0] data
 );
+  reg [31:0] pc;
 
   always @(posedge clk_i or posedge rst_i) 
   begin
@@ -34,7 +35,7 @@ module fetch(
       pc <= pc + 1;
   end
   
-  wire [31:0] data;
+ 
   
   fetch_instruction_memory mem(
   .clk_i   (clk_i),

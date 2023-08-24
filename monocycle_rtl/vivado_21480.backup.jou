@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Sat Aug 19 13:53:26 2023
+# Process ID: 31200
+# Log file: C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/vivado.log
+# Journal file: C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\alan7\Documents\procesadores\monocycle\monocycle_rtl\monocycle_rtl.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+launch_xsim -simset sim_1 -mode behavioral
+launch_xsim -simset sim_1 -mode behavioral
+add_wave {{/monocycle_rtl_tb/prueba/fetch1/mem/ROM}} 
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav4.wcfg}
+launch_xsim -simset sim_1 -mode behavioral
+launch_xsim -simset sim_1 -mode behavioral
+add_wave {{/monocycle_rtl_tb/prueba/alu1}} 
+restart
+run 1 us
+add_wave {{/monocycle_rtl_tb/prueba/ctr1}} 
+restart
+run 1 ms
+restart
+run 1 us
+run 1 us
+run 1 us
+restart
+run 1 us
+restart
+run 100 ns
+add_wave {{/monocycle_rtl_tb/prueba/reg_f}} 
+restart
+run 100 ns
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav.wcfg}
+synth_design -rtl -name rtl_2
+refresh_design
+launch_xsim -simset sim_1 -mode behavioral
+add_wave {{/monocycle_rtl_tb/prueba/m_a_s}} 
+restart
+run 100 ns
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav1.wcfg}
+restart
+run all
+refresh_design
+launch_xsim -simset sim_1 -mode behavioral
+refresh_design
+restart
+run 100 ns
+refresh_design
+launch_xsim -simset sim_1 -mode behavioral
+refresh_design
+launch_xsim -simset sim_1 -mode behavioral
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav1.wcfg}
+refresh_design
+launch_xsim -simset sim_1 -mode behavioral
+launch_xsim -simset sim_1 -mode behavioral
+refresh_design
+launch_xsim -simset sim_1 -mode behavioral
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav1.wcfg}
+close_sim

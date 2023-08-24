@@ -31,6 +31,5 @@ ExecStep()
        exit $RETVAL
    fi
 }
-XELAB_1="C:/Users/alan7/Documents/proyecto procesador monociclo/monocycle_rtl/monocycle_rtl.sim/sim_1/behav/monocycle_rtl_tb.prj"
 
-ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot monocycle_rtl_tb_behav --prj "$XELAB_1"   xil_defaultlib.monocycle_rtl_tb   xil_defaultlib.glbl
+ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot monocycle_rtl_tb_behav --prj C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.sim/sim_1/behav/monocycle_rtl_tb.prj   xil_defaultlib.monocycle_rtl_tb   xil_defaultlib.glbl

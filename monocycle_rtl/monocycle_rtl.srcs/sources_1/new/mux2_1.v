@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 08.08.2023 10:22:03
+// Create Date: 10.08.2023 10:42:43
 // Design Name: 
-// Module Name: fetch_instruction_memory
+// Module Name: mux2_1
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,17 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fetch_instruction_memory(
-    input wire clk_i,
-    input wire [31:0] addr,
-    output reg [31:0] data
+module mux2_1(
+    input wire [31:0] data1,
+    input wire [31:0] data2,
+    input wire s,
+    output reg [31:0] data_output
     );
     
-    reg [31:0] ROM [31:0]; 
-    
-    always @(posedge clk_i)
-        data <= ROM[addr];
-    //assign ROM_data = ROM[ROM_addr]; 
-    
-    initial $readmemb ("C:/Users/alan7/Documents/procesadores/monocycle/kernels/test_slt.txt", ROM, 0, 31); 
+    always @(*)begin 
+        if(s)
+            data_output <= data1;
+        else
+            data_output <= data2;
+    end
 endmodule
