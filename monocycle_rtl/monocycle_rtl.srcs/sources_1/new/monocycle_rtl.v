@@ -32,6 +32,9 @@ module monocycle_rtl(
     /////////////////////////////////////////////
     //  fetch
     wire [31:0]instruction;
+    reg [4:0] imm;
+    wire [31:0] sing_extension_data_branch;
+    wire [31:0] sing_extension_jump;
     
     /////////////////////////////////////////////
     //  register_file
@@ -49,11 +52,14 @@ module monocycle_rtl(
     wire mem_write;
     wire alu_src;
     wire reg_write; 
+    wire imm_rd;
+    wire jump;
     
     /////////////////////////////////////////////
     //  alu
     wire [31:0] alu_result;
     wire [31:0] data_output_alu_src;
+    wire zero;
     
     
     wire [31:0] read_data_memory;
@@ -65,7 +71,12 @@ module monocycle_rtl(
     fetch fetch1(
         .clk_i      (clk_i),
         .rst_i      (rst_i),
-        .data       (instruction)
+        .data       (instruction),
+        .branch     (branch),
+        .zero       (zero),
+        .dato       (sing_extension_data_branch),
+        .jump       (jump),
+        .dato2      (sing_extension_jump)
     );
     
     /////////////////////////////////////////////
@@ -94,7 +105,9 @@ module monocycle_rtl(
         .alu_op      (alu_op),
         .mem_write   (mem_write),
         .alu_src     (alu_src),
-        .reg_write   (reg_write)
+        .reg_write   (reg_write),
+        .imm_rd      (imm_rd),
+        .jump        (jump)
     );   
     
     /////////////////////////////////////////////
@@ -103,7 +116,8 @@ module monocycle_rtl(
         .alu_read_data_1    (read_data_1),
         .alu_read_data_2    (data_output_alu_src),
         .alu_control        (alu_op),
-        .alu_result         (alu_result)
+        .alu_result         (alu_result),
+        .zero               (zero)
     ); 
     
     /////////////////////////////////////////////
@@ -118,8 +132,18 @@ module monocycle_rtl(
     /////////////////////////////////////////////
     //  module sign_extension
     sign_extension s_e(
-         .data_i    (instruction[31:20]),
+         .data_i    ({instruction[31:25],imm}),
          .data_o    (sing_extension_data)
+    );
+    
+     order_and_sing_extension s_e_b(
+            .data_i    ({instruction[31:25],instruction[11:7]}),
+            .data_o    (sing_extension_data_branch)
+     );
+    
+    sing_extension_jump s_e_j(
+             .data_i    (instruction[31:11]),
+             .data_o    (sing_extension_jump)
     );
     
     /////////////////////////////////////////////
@@ -140,5 +164,14 @@ module monocycle_rtl(
         .data_output    (write_data)
     );
     
+    
+    /////////////////////////////////////////////
+    //  mux imm    
+   always @(*)begin 
+            if(imm_rd)
+                imm <= instruction[11:7];
+            else
+                imm <= instruction[24:20];
+   end 
     
 endmodule

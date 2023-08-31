@@ -23,6 +23,11 @@
 module fetch(
   input wire clk_i,    // reloj
   input wire rst_i,  // reinicio
+  input wire branch,
+  input wire zero,
+  input wire [31:0] dato,
+  input wire [31:0] dato2,
+  input wire jump,
   output [31:0] data
 );
   reg [31:0] pc;
@@ -31,8 +36,15 @@ module fetch(
   begin
     if (rst_i)        
       pc <= 0;
-    else              
-      pc <= pc + 1;
+    else begin 
+      if (jump)begin 
+        pc <= dato2;
+      end
+      else if(branch & zero)           
+        pc <= pc + dato;
+      else
+        pc <= pc + 1;
+    end
   end
   
  

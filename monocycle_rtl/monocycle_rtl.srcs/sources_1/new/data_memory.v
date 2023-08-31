@@ -28,13 +28,17 @@ module data_memory(
     output reg [31:0] read_data
     );
     
-    reg [100:0] ROM [31:0]; 
+    reg [31:0] ROM [50:0]; 
     
-    always @(posedge clk_i)
+    always @(*)
         read_data <= ROM[addr];
         
-    always @(*)
-        ROM[addr] = write_data;
+    always @(posedge clk_i)begin 
+        if(mem_write)
+            ROM[addr] = write_data;
+    end
+        
+    initial $readmemb ("C:/Users/alan7/Documents/procesadores/monocycle/kernels/data_memory.txt", ROM, 0, 50);
 
 
 endmodule

@@ -1,9 +1,7 @@
-addi a0,zero,-3
-addi a1,zero,4
-slt  s0, a0,a1
-addi a0,zero,2
-addi a1,zero,-2
-slt  s0, a0,a1
-addi a0,zero, 5
-addi a1,zero,5
-slt  s0, a0,a1
+.data 
+num: .word 8
+.text 
+lw t0, num
+addi t0, t0, 10
+sw t0, num, t2
+#sw ra, 0(sp)

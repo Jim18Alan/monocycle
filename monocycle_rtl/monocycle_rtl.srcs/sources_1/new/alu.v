@@ -23,11 +23,12 @@ module alu (
     input wire [31:0] alu_read_data_1,
     input wire [31:0] alu_read_data_2,
     input wire [3:0] alu_control,
-    output reg [31:0] alu_result
+    output reg [31:0] alu_result,
+    output wire zero
 );
     reg is_neg1, is_neg2;
     reg  [31:0]value1, value2;
-
+    
   
     always @(*)
     begin
@@ -64,17 +65,23 @@ module alu (
              end
              4'b0110: alu_result = alu_read_data_1 << alu_read_data_2;           // Desplazamiento a la izquierda
              4'b0111: alu_result = alu_read_data_1 >> alu_read_data_2;           // Desplazamiento a la derecha 
-             4'b1000: begin 
-                
-                alu_result = alu_read_data_1 >>> alu_read_data_2[4:0];          // Desplazamiento a la derecha aritmético 
-             end
+             4'b1000: alu_result = alu_read_data_1 >>> alu_read_data_2[4:0];          // Desplazamiento a la derecha aritmético 
              4'b1001: begin
                 if(alu_read_data_1 < alu_read_data_2)
                     alu_result =  {{31{1'b0}}, 1'b1};
                 else
                     alu_result = 32'b0;  
              end
+             4'b1010: alu_result[0] = (alu_read_data_1 == alu_read_data_2);
+             4'b1011: alu_result[0] = (alu_read_data_1 != alu_read_data_2);
+            // 4'b1010: alu_result[0] = (alu_read_data_1 < alu_read_data_2);
+             4'b1100: alu_result[0] = (alu_read_data_1 > alu_read_data_2);
+             4'b1101: alu_result[0] = (alu_read_data_1 <= alu_read_data_2);
+             
              default: alu_result = 32'b0;
         endcase
     end
+    
+    assign zero =  alu_result[0];
+    
 endmodule

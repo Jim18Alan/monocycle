@@ -1,0 +1,159 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Tue Aug 29 22:57:43 2023
+# Process ID: 29520
+# Log file: C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/vivado.log
+# Journal file: C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\alan7\Documents\procesadores\monocycle\monocycle_rtl\monocycle_rtl.xpr}
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/0.9/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/1.0/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+Scanning sources...
+Finished scanning sources
+launch_xsim -simset sim_1 -mode behavioral
+INFO: [Runs 36-130] *** Running xelab
+    with args "-m64 --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot monocycle_rtl_tb_behav --prj C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.sim/sim_1/behav/monocycle_rtl_tb.prj   xil_defaultlib.monocycle_rtl_tb   xil_defaultlib.glbl"
+Vivado Simulator 2014.2
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.2/bin/unwrapped/win64.o/xelab.exe --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot monocycle_rtl_tb_behav --prj C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.sim/sim_1/behav/monocycle_rtl_tb.prj xil_defaultlib.monocycle_rtl_tb xil_defaultlib.glbl 
+Multi-threading is on. Using 10 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/fetch_instruction_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch_instruction_memory
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/sign_extension.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extension
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/order_and_sing_extension.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module order_and_sing_extension
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/mux2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_1
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/monocycle_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module monocycle_rtl
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sim_1/new/monocycle_rtl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module monocycle_rtl_tb
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Xilinx/Vivado/2014.2/data/verilog/src/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fetch_instruction_memory
+Compiling module xil_defaultlib.fetch
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.data_memory
+Compiling module xil_defaultlib.sign_extension
+Compiling module xil_defaultlib.order_and_sing_extension
+Compiling module xil_defaultlib.mux2_1
+Compiling module xil_defaultlib.monocycle_rtl
+Compiling module xil_defaultlib.monocycle_rtl_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot monocycle_rtl_tb_behav
+INFO: [Runs 36-26] xelab completed.
+INFO: [Vivado 12-1390] *** Running xsim
+    with args "monocycle_rtl_tb_behav -key {Behavioral:sim_1:Functional:monocycle_rtl_tb} -tclbatch {monocycle_rtl_tb.tcl} -log {monocycle_rtl_tb_behav.log}"
+Vivado Simulator 2014.2
+Time resolution is 1 ps
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 905.020 ; gain = 40.676
+INFO: [Vivado 12-1395] XSim completed. Design snapshot 'monocycle_rtl_tb_behav' loaded.
+INFO: [Vivado 12-3703] XSim simulation ran for 100ns
+launch_xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 905.020 ; gain = 40.676
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ns
+run 100 ns
+run 100 ns
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav1.wcfg}
+INFO: [Simtcl 6-16] Simulation closed
+launch_xsim -simset sim_1 -mode behavioral
+INFO: [Runs 36-130] *** Running xelab
+    with args "-m64 --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot monocycle_rtl_tb_behav --prj C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.sim/sim_1/behav/monocycle_rtl_tb.prj   xil_defaultlib.monocycle_rtl_tb   xil_defaultlib.glbl"
+Vivado Simulator 2014.2
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.2/bin/unwrapped/win64.o/xelab.exe --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot monocycle_rtl_tb_behav --prj C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.sim/sim_1/behav/monocycle_rtl_tb.prj xil_defaultlib.monocycle_rtl_tb xil_defaultlib.glbl 
+Multi-threading is on. Using 10 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/fetch_instruction_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch_instruction_memory
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/sign_extension.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extension
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/order_and_sing_extension.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module order_and_sing_extension
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/mux2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_1
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sources_1/new/monocycle_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module monocycle_rtl
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl/monocycle_rtl.srcs/sim_1/new/monocycle_rtl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module monocycle_rtl_tb
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Xilinx/Vivado/2014.2/data/verilog/src/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fetch_instruction_memory
+Compiling module xil_defaultlib.fetch
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.data_memory
+Compiling module xil_defaultlib.sign_extension
+Compiling module xil_defaultlib.order_and_sing_extension
+Compiling module xil_defaultlib.mux2_1
+Compiling module xil_defaultlib.monocycle_rtl
+Compiling module xil_defaultlib.monocycle_rtl_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot monocycle_rtl_tb_behav
+INFO: [Runs 36-26] xelab completed.
+INFO: [Vivado 12-1390] *** Running xsim
+    with args "monocycle_rtl_tb_behav -key {Behavioral:sim_1:Functional:monocycle_rtl_tb} -tclbatch {monocycle_rtl_tb.tcl} -log {monocycle_rtl_tb_behav.log}"
+Vivado Simulator 2014.2
+Time resolution is 1 ps
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 915.770 ; gain = 0.000
+INFO: [Vivado 12-1395] XSim completed. Design snapshot 'monocycle_rtl_tb_behav' loaded.
+INFO: [Vivado 12-3703] XSim simulation ran for 100ns
+launch_xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 915.770 ; gain = 0.000
+add_wave {{/monocycle_rtl_tb/prueba/s_e_b}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ns
+run 100 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ns
+run 100 ns
+save_wave_config {C:/Users/alan7/Documents/procesadores/monocycle/monocycle_rtl\monocycle_rtl_tb_behav1.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 29 23:26:29 2023...

@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="14" />
    <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/clk_i" type="logic">
       <obj_property name="ElementShortName">clk_i</obj_property>
       <obj_property name="ObjectShortName">clk_i</obj_property>
@@ -590,45 +590,18 @@
       <obj_property name="ElementShortName">ROM[31:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">ROM[31:0][31:0]</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/s_e_b/data_i" type="array">
-      <obj_property name="ElementShortName">data_i[12:0]</obj_property>
-      <obj_property name="ObjectShortName">data_i[12:0]</obj_property>
-   </wvobject>
    <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/s_e_b/data_o" type="array">
       <obj_property name="ElementShortName">data_o[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/clk_i" type="logic">
-      <obj_property name="ElementShortName">clk_i</obj_property>
-      <obj_property name="ObjectShortName">clk_i</obj_property>
+   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/s_e_j/data_i" type="array">
+      <obj_property name="ElementShortName">data_i[20:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[20:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/rst_i" type="logic">
-      <obj_property name="ElementShortName">rst_i</obj_property>
-      <obj_property name="ObjectShortName">rst_i</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/branch" type="logic">
-      <obj_property name="ElementShortName">branch</obj_property>
-      <obj_property name="ObjectShortName">branch</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/zero" type="logic">
-      <obj_property name="ElementShortName">zero</obj_property>
-      <obj_property name="ObjectShortName">zero</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/dato" type="array">
-      <obj_property name="ElementShortName">dato[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dato[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/jump" type="logic">
-      <obj_property name="ElementShortName">jump</obj_property>
-      <obj_property name="ObjectShortName">jump</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/data" type="array">
-      <obj_property name="ElementShortName">data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/fetch1/pc" type="array">
-      <obj_property name="ElementShortName">pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   <wvobject db_ref_id="1" fp_name="/monocycle_rtl_tb/prueba/s_e_j/data_o" type="array">
+      <obj_property name="ElementShortName">data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
    </wvobject>
 </wave_config>
