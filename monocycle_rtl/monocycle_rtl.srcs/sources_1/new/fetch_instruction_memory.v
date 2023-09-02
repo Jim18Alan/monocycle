@@ -28,9 +28,8 @@ module fetch_instruction_memory(
     
     reg [31:0] ROM [31:0]; 
     
-    always @(posedge clk_i)
+    always @(*)
         data <= ROM[addr];
-    //assign ROM_data = ROM[ROM_addr]; 
     
     initial $readmemb ("C:/Users/alan7/Documents/procesadores/monocycle/kernels/test_branch.txt", ROM, 0, 31); 
 endmodule

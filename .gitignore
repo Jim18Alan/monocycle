@@ -1,0 +1,12 @@
+*.log
+*.wdf
+*.dbg
+*.mem
+*.reloc
+*.rtti
+*.wdb
+*.xdbg
+*.exe
+*.sdb
+*.jou
+*.str

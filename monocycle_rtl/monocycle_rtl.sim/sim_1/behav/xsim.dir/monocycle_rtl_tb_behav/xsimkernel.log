@@ -1,5 +1,0 @@
-Running: xsim.dir/monocycle_rtl_tb_behav/xsimk.exe -simmode gui -wdb monocycle_rtl_tb_behav.wdb -simrunnum 0 -socket 49423
-Design successfully loaded
-Design Loading CPU Usage: 217 ms
-Simulation completed
-Simulation CPU Usage: 217 ms
